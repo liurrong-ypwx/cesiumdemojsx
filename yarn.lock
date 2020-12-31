@@ -3384,6 +3384,11 @@ caseless@~0.12.0:
   resolved "https://registry.yarnpkg.com/caseless/-/caseless-0.12.0.tgz#1b681c21ff84033c826543090689420d187151dc"
   integrity sha1-G2gcIf+EAzyCZUMJBolCDRhxUdw=
 
+cesium-heatmap@^0.0.4:
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/cesium-heatmap/-/cesium-heatmap-0.0.4.tgz#6d97213c08748dd254e09ec748d941ea078d98a7"
+  integrity sha1-bZchPAh0jdJU4J7HSNlB6geNmKc=
+
 cesium@^1.76.0:
   version "1.76.0"
   resolved "https://registry.yarnpkg.com/cesium/-/cesium-1.76.0.tgz#f3e253263750c6cae0637236e730b0b1c8685d34"
@@ -5759,6 +5764,11 @@ he@^1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/he/-/he-1.2.0.tgz#84ae65fa7eafb165fddb61566ae14baf05664f0f"
   integrity sha512-F/1DnUGPopORZi0ni+CvrCgHQ5FyEAHRLSApuYWMmrbSwoN2Mn/7k+Gl38gJnR7yyDZk6WLXwiGod1JOWNDKGw==
+
+heatmap.js@^2.0.5:
+  version "2.0.5"
+  resolved "https://registry.yarnpkg.com/heatmap.js/-/heatmap.js-2.0.5.tgz#466d3b86513f5d49112a49d25700ab2730149153"
+  integrity sha1-Rm07hlE/XUkRKknSVwCrJzAUkVM=
 
 hex-color-regex@^1.1.0:
   version "1.1.0"

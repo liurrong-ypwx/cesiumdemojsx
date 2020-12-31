@@ -27,6 +27,7 @@ function CesiumDemo() {
         <div className="main-map-container">
             {/* 初始化一个框来放置场景 */}
             <div id='cesiumContainer' />
+            <div className="div-heatmap" />
 
             {/* 按钮区 */}
             {/* <div className="test-btn-group">
