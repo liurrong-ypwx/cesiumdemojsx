@@ -1,55 +1,27 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./CesiumDemo.css";
-
-
-import * as Cesium from 'cesium';
-import "cesium/Build/Cesium/Widgets/widgets.css";
-
-window.CESIUM_BASE_URL = '/';
-Cesium.Ion.defaultAccessToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI3ZTIxYjQ0Yi1kODkwLTQwYTctYTdjNi1hOTkwYTRhYTI2NDEiLCJpZCI6MzY4OTQsImlhdCI6MTYwNDMwMzkzM30.btKZ2YlmB0wCTBvk3ewmGk5MAjS5rwl_Izra03VcrnY';
+import * as CesiumApi from "./CesiumApi/CesiumApi";
 
 
 function CesiumDemo() {
 
+    const [orgView, setOrgView] = useState(null);
 
     useEffect(() => {
-        initViewer();
+        if (orgView) {
+            orgView.distroy();
+        }
+        const tmpView = CesiumApi.initMap("cesiumContainer");
+        setOrgView(tmpView);
+        // eslint-disable-next-line
     }, [])
 
-    const initViewer = () => {
-        const viewer = new Cesium.Viewer("cesiumContainer", {
-            geocoder: false,
-            homeButton: true,
-            sceneModePicker: false,
-            baseLayerPicker: false,
-            navigationHelpButton: false,
-            animation: false,
-            // creditContainer:"credit",
-            // timeline: false,
-            fullscreenButton: false,
-            vrButton: false,
-            selectionIndicator: false,
-            infoBox: false,
-            // terrainProvider: Cesium.createWorldTerrain({
-            //     // requestVertexNormals:true,
-            //     // requestWaterMask:true
-            // }),
-            // skyBox: new Cesium.SkyBox({
-            //     sources: {
-            //         positiveX: './Models/image/box.png',
-            //         negativeX: './Models/image/box.png',
-            //         positiveY: './Models/image/box.png',
-            //         negativeY: './Models/image/box.png',
-            //         positiveZ: './Models/image/box.png',
-            //         negativeZ: './Models/image/box.png'
-            //     }
-            // })
-        })
+    useEffect(()=>{
 
-        if (viewer) {
-            // 
-        }
-    }
+        if(!orgView) return
+    
+
+    }, [orgView])
 
     return (
         <div className="main-map-container">
